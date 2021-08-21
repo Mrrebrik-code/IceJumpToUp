@@ -4,13 +4,32 @@ using UnityEngine;
 
 public class TriggerAddScore : MonoBehaviour
 {
-	private bool isAdd = true;
+	private bool _isAdd = true;
+	private bool _isPlayerEnter = false;
+	private Player _player;
+	private void Update()
+	{
+		if (_isPlayerEnter && _player != null)
+		{
+			_player.transform.position = new Vector3(transform.position.x, _player.transform.position.y, _player.transform.position.z);
+		}
+	}
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.GetComponent<Player>() && isAdd)
+		_isPlayerEnter = true;
+		if(_player == null)
+		{
+			_player = collision.GetComponent<Player>();
+		}
+		if (collision.GetComponent<Player>() && _isAdd)
 		{
 			ScoreHanlder.Instance.AddScore();
-			isAdd = false;	
+			_isAdd = false;
 		}
+	}
+
+	private void OnTriggerExit2D()
+	{
+		_isPlayerEnter = false;
 	}
 }
