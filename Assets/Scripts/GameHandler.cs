@@ -11,8 +11,8 @@ public class GameHandler : MonoBehaviour
 	[SerializeField] Player playerObj;
 	private void Start()
 	{
-		GenerationLevel(10);
-		playerObj = Instantiate(player, LevelContent);
+/*		GenerationLevel(10);
+		playerObj = Instantiate(player, LevelContent);*/
 	}
 
 	private void GenerationLevel(int level)
