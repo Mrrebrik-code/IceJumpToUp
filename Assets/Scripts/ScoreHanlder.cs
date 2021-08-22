@@ -1,17 +1,19 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ScoreHanlder : MonoBehaviour
 {
 	public static ScoreHanlder Instance;
 	public Action<int> OnScroreUpdateAction;
+	public Action<int> OnDiamondUpdateAction;
 
 	private int _score;
+	private int _diamondCount;
 	private void Awake()
 	{
-		if(Instance == null)
+		_score = default;
+		_diamondCount = default;
+		if (Instance == null)
 		{
 			Instance = this;
 		}
@@ -19,10 +21,17 @@ public class ScoreHanlder : MonoBehaviour
 		{
 			Destroy(gameObject);
 		}
+
 	}
 	public void AddScore()
 	{
 		_score++;
 		OnScroreUpdateAction?.Invoke(_score);
+	}
+
+	public void AddDiamond()
+	{
+		_diamondCount++;
+		OnDiamondUpdateAction?.Invoke(_diamondCount);
 	}
 }

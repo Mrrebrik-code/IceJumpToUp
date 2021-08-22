@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine;
 public class MoneyHandler : MonoBehaviour
 {
 	public static MoneyHandler Instance;
+	public Action<int> OnMoneyUpdateAction;
 	private int _money;
 
 	private void Awake()
@@ -29,11 +31,21 @@ public class MoneyHandler : MonoBehaviour
 	{
 		_money += count;
 		PlayerPrefs.SetInt("money", _money);
+		OnMoneyUpdateAction?.Invoke(_money);
 	}
 
 	public void PutMoneyToBank(int count)
 	{
-		_money -= count;
-		PlayerPrefs.SetInt("money", _money);
+		if(_money >= count)
+		{
+			_money -= count;
+			PlayerPrefs.SetInt("money", _money);
+			OnMoneyUpdateAction?.Invoke(_money);
+		}
+		else
+		{
+			Debug.Log($"Insufficient funds to buy product! Money: {_money} < Price: {count}");
+		}
+		
 	}
 }

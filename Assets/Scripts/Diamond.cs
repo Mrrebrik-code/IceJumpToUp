@@ -11,6 +11,13 @@ public class Diamond : MonoBehaviour
 		if (collision.GetComponent<Player>())
 		{
 			MoneyHandler.Instance.AddMoneyToBank(_countMoneyAdd);
+			ScoreHanlder.Instance.AddDiamond();
+			gameObject.SetActive(false);
 		}
+	}
+
+	private void OnEnable()
+	{
+		gameObject.SetActive(true);
 	}
 }
