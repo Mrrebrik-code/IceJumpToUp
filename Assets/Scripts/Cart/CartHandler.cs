@@ -35,12 +35,11 @@ public class CartHandler : MonoBehaviour
 		
 		if(vector == 0)
 		{
-			Debug.Log("test1");
 			_isVector = true;
 		}
 		else if(vector == 1)
 		{
-			Debug.Log("test2");
+
 			_isVector = false;
 		}
 	}

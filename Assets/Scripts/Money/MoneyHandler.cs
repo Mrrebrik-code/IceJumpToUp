@@ -24,6 +24,7 @@ public class MoneyHandler : MonoBehaviour
 		if (PlayerPrefs.HasKey("money"))
 		{
 			_money = PlayerPrefs.GetInt("money");
+			OnMoneyUpdateAction?.Invoke(_money);
 		}
 	}
 

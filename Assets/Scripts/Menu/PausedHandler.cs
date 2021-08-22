@@ -12,7 +12,9 @@ public class PausedHandler : MonoBehaviour
 	[SerializeField] private GameObject _pausedPanel;
 	public void ResetGame()
 	{
-		SceneManager.LoadScene(_sceneGame);
+		GameHandler.Instance.Restart();
+		ScoreHanlder.Instance.Restart();
+		GameHandler.Instance.StartGame();
 	}
 
 	public void ExitGame()

@@ -16,7 +16,7 @@ public class TriggerToCart : MonoBehaviour
 	public void OnTriggerEnter2D()
 	{
 		OnTriggerAction?.Invoke((int)_type);
-		Debug.Log((int)_type);
+
 	}
 
 }

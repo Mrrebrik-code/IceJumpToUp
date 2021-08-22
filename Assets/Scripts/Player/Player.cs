@@ -11,13 +11,23 @@ public class Player : MonoBehaviour
 	[SerializeField] private float _jumpRorce;
 	[SerializeField] private float _countTorque;
 	[SerializeField] private GroundChecker _groundChecker;
+	public Vector3 StartPosition;
 
 	private void Awake()
 	{
 		Instance = this;
 		_rigidbody2D = GetComponent<Rigidbody2D>();
+		StartPosition = transform.position;
 	}
 
+	public void Restart()
+	{
+		_rigidbody2D.bodyType = RigidbodyType2D.Static;
+		_rigidbody2D.velocity = Vector2.zero;
+		_rigidbody2D.angularVelocity = 0f;
+		transform.position = StartPosition;
+		_rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
+	}
 	public void SetSkin(Skin skin)
 	{
 		_spriteSkin.sprite = skin.SpriteSkin;

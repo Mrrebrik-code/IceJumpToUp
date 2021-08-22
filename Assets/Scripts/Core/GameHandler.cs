@@ -30,8 +30,16 @@ public class GameHandler : MonoBehaviour
 
 	public void StartGame()
 	{
+		
 		_gameTransform = Instantiate(_gameTransformPrefab);
 		_player = Player.Instance;
+		_player.Restart();
+		_player.transform.position = _player.StartPosition;
+		if(SkinPlayer != null)
+		{
+			_player.SetSkin(SkinPlayer);
+		}
+		
 		_pools = new List<MonoPool<Level>>();
 		for (int i = 0; i < _poolCount; i++)
 		{
@@ -43,6 +51,14 @@ public class GameHandler : MonoBehaviour
 
 
 		_player.gameObject.SetActive(true);
+	}
+
+	public void Restart()
+	{
+		_pools = new List<MonoPool<Level>>();
+		Destroy(_gameTransform.gameObject);
+		_gameTransform = null;
+
 	}
 
 	[SerializeField] private Level _destroyLevel;

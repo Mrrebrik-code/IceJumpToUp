@@ -34,4 +34,13 @@ public class ScoreHanlder : MonoBehaviour
 		_diamondCount++;
 		OnDiamondUpdateAction?.Invoke(_diamondCount);
 	}
+
+	public void Restart()
+	{
+		_score = default;
+		_diamondCount = default;
+
+		OnScroreUpdateAction?.Invoke(_score);
+		OnDiamondUpdateAction?.Invoke(_diamondCount);
+	}
 }
