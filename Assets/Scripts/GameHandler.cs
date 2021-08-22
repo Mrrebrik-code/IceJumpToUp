@@ -37,27 +37,20 @@ public class GameHandler : MonoBehaviour
 		{
 			if (pool.HasFreeElement(element: out var element))
 			{
+				if(_destroyLevel != null && element.Id == _destroyLevel.Id)
+				{
+					element.gameObject.SetActive(false);
+					continue;
+				}
 				var level = element;
 				if(_destroyLevel != null)
 				{
 					level.transform.position = new Vector3(_destroyLevel.PointUp.position.x, _destroyLevel.PointUp.position.y + 3, _destroyLevel.PointUp.position.z);
 				}
-				//_destroyLevel = level;
-	/*			foreach (var poolBusyElement in _pools)
-				{
-					if(poolBusyElement.HasBusyElement(element: out var elementBusy))
-					{
-						_destroyLevel = elementBusy;
-						level.transform.position = new Vector3(elementBusy.PointUp.position.x, elementBusy.PointUp.position.y + 3, elementBusy.PointUp.position.z);
-						//elementBusy.gameObject.SetActive(false);
-					}
-				}*/
 				level.gameObject.SetActive(true);
 				break;
 			}
 		}
-		/*var level = _pools[Random.Range(0, _pools.Count)].GetFreeElement();
-		level.gameObject.SetActive(true);*/
 
 
 	}
@@ -71,8 +64,7 @@ public class GameHandler : MonoBehaviour
 			{
 				if (poolBusyElement.HasBusyElement(element: out var elementBusy))
 				{
-					_destroyLevel = elementBusy;
-					//elementBusy.gameObject.SetActive(false);
+					_destroyLevel = elementBusy; 
 				}
 			}
 		}
