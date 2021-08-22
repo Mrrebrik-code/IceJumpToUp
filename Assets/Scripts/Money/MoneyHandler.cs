@@ -34,17 +34,19 @@ public class MoneyHandler : MonoBehaviour
 		OnMoneyUpdateAction?.Invoke(_money);
 	}
 
-	public void PutMoneyToBank(int count)
+	public bool PutMoneyToBank(int count)
 	{
 		if(_money >= count)
 		{
 			_money -= count;
 			PlayerPrefs.SetInt("money", _money);
 			OnMoneyUpdateAction?.Invoke(_money);
+			return true;
 		}
 		else
 		{
 			Debug.Log($"Insufficient funds to buy product! Money: {_money} < Price: {count}");
+			return false;
 		}
 		
 	}

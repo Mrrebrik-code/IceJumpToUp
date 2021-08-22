@@ -8,15 +8,30 @@ public class GameHandler : MonoBehaviour
 	[SerializeField] private int _poolCount = 2;
 	[SerializeField] private bool _autoExpand = false;
 	[SerializeField] private List<Level> _levelVariantPrefab;
-	[SerializeField] private Transform _gameTransform;
-
+	[SerializeField] private Transform _gameTransformPrefab;
+	private Transform _gameTransform;
 	private List<MonoPool<Level>> _pools;
 
 	[SerializeField] private Player _player;
+	public Skin SkinPlayer;
 
-	private void Start()
+	private void Awake()
 	{
-		Instance = this;
+		if(Instance == null)
+		{
+			Instance = this;
+		}
+		else
+		{
+			Destroy(gameObject);
+		}
+		DontDestroyOnLoad(gameObject);
+	}
+
+	public void StartGame()
+	{
+		_gameTransform = Instantiate(_gameTransformPrefab);
+		_player = Player.Instance;
 		_pools = new List<MonoPool<Level>>();
 		for (int i = 0; i < _poolCount; i++)
 		{
