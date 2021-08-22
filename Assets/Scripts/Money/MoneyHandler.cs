@@ -24,8 +24,14 @@ public class MoneyHandler : MonoBehaviour
 		if (PlayerPrefs.HasKey("money"))
 		{
 			_money = PlayerPrefs.GetInt("money");
-			OnMoneyUpdateAction?.Invoke(_money);
+			StartCoroutine(UpdateMoney());
 		}
+	}
+
+	IEnumerator UpdateMoney()
+	{
+		yield return new WaitForSeconds(0.5f);
+		OnMoneyUpdateAction?.Invoke(_money);
 	}
 
 	public void AddMoneyToBank(int count)

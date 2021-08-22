@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
 	public static Player Instance;
-	private Image _spriteSkin;
+	public SpriteRenderer SpriteSkin;
 	private Rigidbody2D _rigidbody2D;
 	[SerializeField] private float _jumpRorce;
 	[SerializeField] private float _countTorque;
@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
 	}
 	public void SetSkin(Skin skin)
 	{
-		_spriteSkin.sprite = skin.SpriteSkin;
+		SpriteSkin.sprite = skin.SpriteSkin;
 	}
 	public void Jump()
 	{

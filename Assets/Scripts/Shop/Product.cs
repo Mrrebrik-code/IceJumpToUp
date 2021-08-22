@@ -19,7 +19,7 @@ public class Product : MonoBehaviour
 	[SerializeField] private Text _textPrice;
 	[SerializeField] private Image _spriteSkin;
 
-	[SerializeField] private GameObject _buyButton;
+	[SerializeField] private BuySkinButton _buyButton;
 	[SerializeField] private SelectedSkinButton _selectedButton;
 
 
@@ -28,6 +28,8 @@ public class Product : MonoBehaviour
 		_spriteSkin.sprite = _skin.SpriteSkin;
 		_textPrice.text = _price.ToString();
 		_selectedButton.OnSelectedSkinAction += OnSelectedSkin;
+		_buyButton.OnBuySkinAction += OnBuySkin;
+
 		CheckBuyProduct();
 	}
 
@@ -36,13 +38,13 @@ public class Product : MonoBehaviour
 		if(PlayerPrefs.HasKey("product_" + _nameSkin))
 		{
 			isBuy = true;
-			_buyButton.SetActive(false);
+			_buyButton.gameObject.SetActive(false);
 			_selectedButton.gameObject.SetActive(true);
 		}
 		else
 		{
 			isBuy = false;
-			_buyButton.SetActive(true);
+			_buyButton.gameObject.SetActive(true);
 			_selectedButton.gameObject.SetActive(false);
 		}
 	}
@@ -50,5 +52,10 @@ public class Product : MonoBehaviour
 	private void OnSelectedSkin()
 	{
 		GameHandler.Instance.SkinPlayer = _skin;
+	}
+
+	private void OnBuySkin()
+	{
+		ShopHandler.Instance.BuyProduct(this);
 	}
 }
