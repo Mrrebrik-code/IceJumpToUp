@@ -12,4 +12,8 @@ public class TriggerAddScore : MonoBehaviour
 			_isAdd = false;
 		}
 	}
+	private void OnEnable()
+	{
+		_isAdd = true;
+	}
 }

@@ -14,7 +14,7 @@ public class MonoPool<T> where T : MonoBehaviour
 		Prefab = prefab;
 		Container = null;
 
-		CreatePool(count);
+		CreatePool(count: count);
 	}
 
 	public MonoPool(T prefab, int count, Transform container)
@@ -22,7 +22,7 @@ public class MonoPool<T> where T : MonoBehaviour
 		Prefab = prefab;
 		Container = container;
 
-		CreatePool(count);
+		CreatePool(count: count);
 	}
 
 	private void CreatePool(int count)
@@ -31,7 +31,7 @@ public class MonoPool<T> where T : MonoBehaviour
 
 		for (int i = 0; i < count; i++)
 		{
-			CreateObject();
+			CreateObject(isActiveByDefault: false);
 		}
 	}
 
@@ -41,16 +41,33 @@ public class MonoPool<T> where T : MonoBehaviour
 		createdObject.gameObject.SetActive(isActiveByDefault);
 		_pool.Add(createdObject);
 		return createdObject;
+
 	}
 
 	public bool HasFreeElement(out T element)
 	{
+
 		foreach (var mono in _pool)
 		{
 			if (!mono.gameObject.activeInHierarchy)
 			{
 				element = mono;
 				mono.gameObject.SetActive(true);
+				return true;
+			}
+		}
+		element = null;
+		return false;
+	}
+
+	public bool HasBusyElement(out T element)
+	{
+		foreach (var mono in _pool)
+		{
+			if (mono.gameObject.activeInHierarchy)
+			{
+				element = mono;
+				//mono.gameObject.SetActive(false);
 				return true;
 			}
 		}
@@ -61,7 +78,7 @@ public class MonoPool<T> where T : MonoBehaviour
 
 	public T GetFreeElement()
 	{
-		if(HasFreeElement(out var element))
+		if (HasFreeElement(element: out var element))
 		{
 			return element;
 		}

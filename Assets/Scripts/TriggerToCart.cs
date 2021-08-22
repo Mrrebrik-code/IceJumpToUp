@@ -19,5 +19,4 @@ public class TriggerToCart : MonoBehaviour
 		Debug.Log((int)_type);
 	}
 
-
 }
