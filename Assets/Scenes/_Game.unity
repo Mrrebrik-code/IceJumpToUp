@@ -2058,6 +2058,7 @@ MonoBehaviour:
   - {fileID: 8774276448596827215, guid: 5ac2ef0bdb9924d46a20d7011ce457ba, type: 3}
   _gameTransform: {fileID: 1809984427}
   _player: {fileID: 5770056379441587767}
+  _destroyLevel: {fileID: 0}
 --- !u!1 &1683964028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3106,7 +3107,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &5770056379441587763
 SpriteRenderer:
   m_ObjectHideFlags: 0
