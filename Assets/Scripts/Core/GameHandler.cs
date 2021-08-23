@@ -27,7 +27,11 @@ public class GameHandler : MonoBehaviour
 		}
 		DontDestroyOnLoad(gameObject);
 	}
-
+	public void SetSkin(Skin skin)
+	{
+		SkinPlayer = skin;
+		PlayerPrefs.SetString("skin_player", skin.Name);
+	}
 	public void StartGame()
 	{
 		

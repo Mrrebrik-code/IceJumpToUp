@@ -11,14 +11,16 @@ public class ShopHandler : MonoBehaviour
 	{
 		Instance = this;
 	}
-	public void BuyProduct(Product product)
+	public bool BuyProduct(Product product)
 	{
 		if (MoneyHandler.Instance.PutMoneyToBank(product.Price))
 		{
 			product.isBuy = true;
 			AddProduct(product);
 			PlayerPrefs.SetInt("product_" + product.Name, 1);
+			return true;
 		}
+		return false;
 	}
 
 	public void AddProduct(Product product)
