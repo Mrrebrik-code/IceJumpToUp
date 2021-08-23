@@ -12,7 +12,7 @@ public class Product : MonoBehaviour
 
 	public string Name { get { return _nameSkin; } }
 	public int Price { get{ return _price; } }
-	public Skin Skin{ get{ return _skin; } }
+	public Skin Skin{ get{ return _skin; } set{ _skin = value; } }
 
 	public bool isBuy = false;
 
@@ -23,10 +23,13 @@ public class Product : MonoBehaviour
 	[SerializeField] private SelectedSkinButton _selectedButton;
 
 
-	private void Awake()
+	private void Start()
 	{
+		_nameSkin = _skin.Name;
+		_price = _skin.Price;
 		_spriteSkin.sprite = _skin.SpriteSkin;
 		_textPrice.text = _price.ToString();
+		gameObject.name = "Product_" + _nameSkin;
 		_selectedButton.OnSelectedSkinAction += OnSelectedSkin;
 		_buyButton.OnBuySkinAction += OnBuySkin;
 
@@ -57,5 +60,7 @@ public class Product : MonoBehaviour
 	private void OnBuySkin()
 	{
 		ShopHandler.Instance.BuyProduct(this);
+		_selectedButton.gameObject.SetActive(true);
+		_buyButton.gameObject.SetActive(false);
 	}
 }

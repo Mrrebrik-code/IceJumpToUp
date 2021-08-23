@@ -10,6 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38bff0813f84e4248a6056f7b39a1adf, type: 3}
-  m_Name: Skin_IceBlue
+  m_Name: IceRed
   m_EditorClassIdentifier: 
+  Name: Ice_red
   SpriteSkin: {fileID: 21300000, guid: 44a054df1702e39458b7072b08d0f212, type: 3}
+  Price: 60
