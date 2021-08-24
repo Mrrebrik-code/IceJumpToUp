@@ -38,25 +38,41 @@ public class Product : MonoBehaviour
 
 	private void CheckBuyProduct()
 	{
-		if(PlayerPrefs.HasKey("product_" + _nameSkin))
+		if (_skin.isDefault)
 		{
 			isBuy = true;
-			if (PlayerPrefs.HasKey("skin_player"))
-			{
-				if(PlayerPrefs.GetString("skin_player") == _nameSkin)
-				{
-					GameHandler.Instance.SetSkin(_skin);
-				}
-			}
+			PlayerPrefs.SetInt("product_" + _nameSkin, 1);
 			_buyButton.gameObject.SetActive(false);
 			_selectedButton.gameObject.SetActive(true);
 		}
 		else
 		{
-			isBuy = false;
-			_buyButton.gameObject.SetActive(true);
-			_selectedButton.gameObject.SetActive(false);
+			if (PlayerPrefs.HasKey("product_" + _nameSkin))
+			{
+				isBuy = true;
+				if (PlayerPrefs.HasKey("skin_player"))
+				{
+					if (PlayerPrefs.GetString("skin_player") == _nameSkin)
+					{
+						GameHandler.Instance.SetSkin(_skin);
+					}
+				}
+				_buyButton.gameObject.SetActive(false);
+				_selectedButton.gameObject.SetActive(true);
+			}
+
+			else
+			{
+				/*			if (_skin.isDefault)
+							{
+								GameHandler.Instance.SetSkin(_skin);
+							}*/
+				isBuy = false;
+				_buyButton.gameObject.SetActive(true);
+				_selectedButton.gameObject.SetActive(false);
+			}
 		}
+		
 	}
 
 	private void OnSelectedSkin()

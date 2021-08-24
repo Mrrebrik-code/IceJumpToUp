@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: IceWhite
   m_EditorClassIdentifier: 
   Name: Ice_white
-  SpriteSkin: {fileID: 21300000, guid: 44a054df1702e39458b7072b08d0f212, type: 3}
+  SpriteSkin: {fileID: -1303110711307934212, guid: 750c3a7dcb4302d478baae4f069e69c9, type: 3}
   Price: 150

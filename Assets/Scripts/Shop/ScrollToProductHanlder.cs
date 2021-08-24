@@ -70,16 +70,19 @@ public class ScrollToProductHanlder : MonoBehaviour
 	private IEnumerator SnapToSelectedSkin()
 	{
 		yield return new WaitForSeconds(0.2f);
-		foreach (var product in _products)
+		if(GameHandler.Instance.SkinPlayer != null)
 		{
-			if (product.Name == GameHandler.Instance.SkinPlayer.Name)
+			foreach (var product in _products)
 			{
-				_isInit = false;
-				_contentRectTransform.anchoredPosition = -product.transform.localPosition;
-				break;
+				if (product.Name == GameHandler.Instance.SkinPlayer.Name)
+				{
+					_isInit = false;
+					_contentRectTransform.anchoredPosition = -product.transform.localPosition;
+					break;
+				}
 			}
+			_isInit = true;
 		}
-		_isInit = true;
 	}
 
 	private bool LoadSkinsToResources()

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: IceGreen
   m_EditorClassIdentifier: 
   Name: Ice_green
-  SpriteSkin: {fileID: 21300000, guid: 44a054df1702e39458b7072b08d0f212, type: 3}
+  SpriteSkin: {fileID: -7560284153744367771, guid: 750c3a7dcb4302d478baae4f069e69c9, type: 3}
   Price: 100
+  isDefault: 0

@@ -25,8 +25,9 @@ public class Player : MonoBehaviour
 		_rigidbody2D.bodyType = RigidbodyType2D.Static;
 		_rigidbody2D.velocity = Vector2.zero;
 		_rigidbody2D.angularVelocity = 0f;
-		transform.position = StartPosition;
+
 		_rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
+		transform.position = StartPosition;
 	}
 	public void SetSkin(Skin skin)
 	{

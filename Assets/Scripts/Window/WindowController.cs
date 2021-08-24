@@ -8,10 +8,17 @@ public class WindowController : MonoBehaviour
 
 	private void Start()
 	{
-		WindowHandler.Instance.SetWindow(_window);
+		if (WindowHandler.Instance != null)
+		{
+			WindowHandler.Instance.SetWindow(_window);
+		}
 	}
 	private void OnEnable()
 	{
-		WindowHandler.Instance.SetWindow(_window);
+		if(WindowHandler.Instance != null)
+		{
+			WindowHandler.Instance.SetWindow(_window);
+		}
+	
 	}
 }
