@@ -38,6 +38,6 @@ public class PausedHandler : MonoBehaviour
 
 	public void EndLevel()
 	{
-		Debug.Log("End level");
+		_endPanel.SetActive(true);
 	}
 }
