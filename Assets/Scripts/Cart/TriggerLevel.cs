@@ -7,7 +7,8 @@ public class TriggerLevel : MonoBehaviour
 	private enum TypeTriggerLevel
 	{
 		create,
-		destroy
+		destroy,
+		end
 	}
 	[SerializeField] TypeTriggerLevel _type;
 	private bool _isActive = true;
@@ -26,6 +27,15 @@ public class TriggerLevel : MonoBehaviour
 			if (collision.GetComponent<Player>() && _isActive)
 			{
 				GameHandler.Instance.DestroyLevel();
+				_isActive = false;
+			}
+		}
+		else if (_type == TypeTriggerLevel.end)
+		{
+			if (collision.GetComponent<Player>() && _isActive)
+			{
+				PausedHandler.Instance.EndLevel();
+				PausedHandler.Instance.ResetGame();
 				_isActive = false;
 			}
 		}

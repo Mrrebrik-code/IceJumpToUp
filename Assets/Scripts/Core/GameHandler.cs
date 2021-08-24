@@ -78,7 +78,8 @@ public class GameHandler : MonoBehaviour
 					continue;
 				}
 				var level = element;
-				if(_destroyLevel != null)
+				level.TriggerEnd.SetActive(false);
+				if (_destroyLevel != null)
 				{
 					level.transform.position = new Vector3(_destroyLevel.PointUp.position.x, _destroyLevel.PointUp.position.y + 3, _destroyLevel.PointUp.position.z);
 				}
@@ -99,7 +100,8 @@ public class GameHandler : MonoBehaviour
 			{
 				if (poolBusyElement.HasBusyElement(element: out var elementBusy))
 				{
-					_destroyLevel = elementBusy; 
+					_destroyLevel = elementBusy;
+					_destroyLevel.TriggerEnd.SetActive(true);
 				}
 			}
 		}
@@ -110,6 +112,7 @@ public class GameHandler : MonoBehaviour
 				if (poolBusyElement.HasBusyElement(element: out var elementBusy))
 				{
 					_destroyLevel = elementBusy;
+					_destroyLevel.TriggerEnd.SetActive(true);
 					//elementBusy.gameObject.SetActive(false);
 				}
 			}

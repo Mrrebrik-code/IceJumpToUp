@@ -63,10 +63,6 @@ public class Product : MonoBehaviour
 
 			else
 			{
-				/*			if (_skin.isDefault)
-							{
-								GameHandler.Instance.SetSkin(_skin);
-							}*/
 				isBuy = false;
 				_buyButton.gameObject.SetActive(true);
 				_selectedButton.gameObject.SetActive(false);

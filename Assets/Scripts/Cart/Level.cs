@@ -7,4 +7,5 @@ public class Level : MonoBehaviour
 	public int Id;
 	public Transform PointUp;
 	public Transform PointDown;
+	public GameObject TriggerEnd;
 }

@@ -6,10 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class PausedHandler : MonoBehaviour
 {
+	public static PausedHandler Instance;
 	private const string _sceneGame = "_Game";
 	private const string _sceneMenu = "_Menu";
 
 	[SerializeField] private GameObject _pausedPanel;
+	[SerializeField] private GameObject _endPanel;
+
+	private void Awake()
+	{
+		Instance = this;
+	}
 	public void ResetGame()
 	{
 		GameHandler.Instance.Restart();
@@ -27,5 +34,10 @@ public class PausedHandler : MonoBehaviour
 	{
 		_pausedPanel.SetActive(active);
 		Time.timeScale = Convert.ToInt32(!active);
+	}
+
+	public void EndLevel()
+	{
+		Debug.Log("End level");
 	}
 }
