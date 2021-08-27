@@ -19,9 +19,11 @@ public class PausedHandler : MonoBehaviour
 	}
 	public void ResetGame()
 	{
+		Time.timeScale = 1f;
 		GameHandler.Instance.Restart();
 		ScoreHanlder.Instance.Restart();
 		GameHandler.Instance.StartGame();
+
 	}
 
 	public void ExitGame()

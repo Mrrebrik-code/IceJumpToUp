@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: IceRed
   m_EditorClassIdentifier: 
   Name: Ice_red
-  SpriteSkin: {fileID: -3636919207902785661, guid: 750c3a7dcb4302d478baae4f069e69c9, type: 3}
+  SpriteSkin: {fileID: 21300000, guid: c399233b4d8f5a2438436b1e6ae97f3f, type: 3}
   Price: 60
+  isDefault: 0

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: IceBlue
   m_EditorClassIdentifier: 
   Name: Ice_blue
-  SpriteSkin: {fileID: -336711030326400945, guid: 750c3a7dcb4302d478baae4f069e69c9, type: 3}
+  SpriteSkin: {fileID: 21300000, guid: 0666d23d44b32f247bb2126bc0519450, type: 3}
   Price: 30
   isDefault: 1

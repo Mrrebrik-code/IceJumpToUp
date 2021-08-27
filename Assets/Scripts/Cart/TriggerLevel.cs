@@ -36,6 +36,7 @@ public class TriggerLevel : MonoBehaviour
 			{
 				PausedHandler.Instance.EndLevel();
 				PausedHandler.Instance.ResetGame();
+				Time.timeScale = 0f;
 				_isActive = false;
 			}
 		}
