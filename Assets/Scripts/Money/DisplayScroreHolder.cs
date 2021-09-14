@@ -10,7 +10,6 @@ public class DisplayScroreHolder : MonoBehaviour
 	[SerializeField] private Text _textCountDiamondCurrent;
 
 	[SerializeField] private Text _textScoreOld;
-	[SerializeField] private Text _textCountDiamondOld;
 
 	private void Start()
 	{
@@ -31,7 +30,5 @@ public class DisplayScroreHolder : MonoBehaviour
 	{
 		_textCountDiamond.text = count.ToString();
 		_textCountDiamondCurrent.text = count.ToString();
-
-		_textCountDiamondOld.text = countOld.ToString();
 	}
 }
