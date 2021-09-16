@@ -608,7 +608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4205334154893283411, guid: e54c4e27b29a8b14db9fcb4cf89449ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.3333316
+      value: 4.4
       objectReference: {fileID: 0}
     - target: {fileID: 4205334154893283411, guid: e54c4e27b29a8b14db9fcb4cf89449ed, type: 3}
       propertyPath: m_LocalPosition.z
@@ -641,6 +641,26 @@ PrefabInstance:
     - target: {fileID: 4205334154893283411, guid: e54c4e27b29a8b14db9fcb4cf89449ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205334154893283500, guid: e54c4e27b29a8b14db9fcb4cf89449ed, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0a1966c6f05105f4ba79edefa74880ff, type: 3}
+    - target: {fileID: 4205334154893283500, guid: e54c4e27b29a8b14db9fcb4cf89449ed, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205334154893283500, guid: e54c4e27b29a8b14db9fcb4cf89449ed, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205334154893283500, guid: e54c4e27b29a8b14db9fcb4cf89449ed, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205334154893283500, guid: e54c4e27b29a8b14db9fcb4cf89449ed, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4205334154893283501, guid: e54c4e27b29a8b14db9fcb4cf89449ed, type: 3}
       propertyPath: m_Name
@@ -784,6 +804,10 @@ PrefabInstance:
     - target: {fileID: 4404545994422660696, guid: c6f8224296f49474b8eb4bcceb5ae627, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.351
+      objectReference: {fileID: 0}
+    - target: {fileID: 4449189722173918853, guid: c6f8224296f49474b8eb4bcceb5ae627, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6f8224296f49474b8eb4bcceb5ae627, type: 3}

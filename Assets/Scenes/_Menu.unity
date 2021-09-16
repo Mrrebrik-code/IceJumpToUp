@@ -195,17 +195,6 @@ MonoBehaviour:
   _contenVector: {x: 0, y: 0}
   _isInit: 0
   _isScrolling: 0
---- !u!114 &49000830 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3881186185410961260, guid: 3a3678491d0686444a0c0ec8dbb578cf, type: 3}
-  m_PrefabInstance: {fileID: 3881186184931376651}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efaa34428003d2245a2cf4820c47964c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &100581699
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,7 +247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1444,7 +1433,7 @@ GameObject:
   - component: {fileID: 1930489798}
   - component: {fileID: 1930489797}
   m_Layer: 5
-  m_Name: Text
+  m_Name: VersionCop_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1714,19 +1703,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2119683850}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 49000830}
-        m_TargetAssemblyTypeName: MoneyHandler, Assembly-CSharp
-        m_MethodName: AddMoneyToBank
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 100
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2119683850
 MonoBehaviour:
   m_ObjectHideFlags: 0
