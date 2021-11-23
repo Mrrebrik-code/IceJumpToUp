@@ -76,6 +76,7 @@ public class ScrollToProductHanlder : MonoBehaviour
 			{
 				if (product.Name == GameHandler.Instance.SkinPlayer.Name)
 				{
+					ShopHandler.Instance.SelectedSkin(product);
 					_isInit = false;
 					_contentRectTransform.anchoredPosition = -product.transform.localPosition;
 					break;

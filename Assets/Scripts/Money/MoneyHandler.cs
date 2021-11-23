@@ -8,6 +8,7 @@ public class MoneyHandler : MonoBehaviour
 	public static MoneyHandler Instance;
 	public Action<int> OnMoneyUpdateAction;
 	private int _money;
+	[SerializeField] private GameObject _warningPopup;
 
 	private void Awake()
 	{
@@ -53,6 +54,7 @@ public class MoneyHandler : MonoBehaviour
 		else
 		{
 			Debug.Log($"Insufficient funds to buy product! Money: {_money} < Price: {count}");
+			Instantiate(_warningPopup, FindObjectOfType<Canvas>().transform);
 			return false;
 		}
 		

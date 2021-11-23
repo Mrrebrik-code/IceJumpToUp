@@ -44,6 +44,7 @@ public class Product : MonoBehaviour
 			PlayerPrefs.SetInt("product_" + _nameSkin, 1);
 			_buyButton.gameObject.SetActive(false);
 			_selectedButton.gameObject.SetActive(true);
+			ShopHandler.Instance.AddProduct(this);
 		}
 		else
 		{
@@ -59,6 +60,7 @@ public class Product : MonoBehaviour
 				}
 				_buyButton.gameObject.SetActive(false);
 				_selectedButton.gameObject.SetActive(true);
+				ShopHandler.Instance.AddProduct(this);
 			}
 
 			else
@@ -74,6 +76,7 @@ public class Product : MonoBehaviour
 	private void OnSelectedSkin()
 	{
 		GameHandler.Instance.SetSkin(_skin);
+		ShopHandler.Instance.SelectedSkin(this);
 	}
 
 	private void OnBuySkin()
@@ -83,5 +86,10 @@ public class Product : MonoBehaviour
 			_selectedButton.gameObject.SetActive(true);
 			_buyButton.gameObject.SetActive(false);
 		}
+	}
+
+	public void OnSelectedButtons(bool selected)
+	{
+		_selectedButton.Selected(selected);
 	}
 }

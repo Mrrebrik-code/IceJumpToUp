@@ -27,4 +27,19 @@ public class ShopHandler : MonoBehaviour
 	{
 		BuyProducts.Add(product);
 	}
+
+	public void SelectedSkin(Product productSelected)
+	{
+		foreach (var product in BuyProducts)
+		{
+			if(product == productSelected)
+			{
+				product.OnSelectedButtons(true);
+			}
+			else
+			{
+				product.OnSelectedButtons(false);
+			}
+		}
+	}
 }
