@@ -386,6 +386,7 @@ MonoBehaviour:
   PointUp: {fileID: 6878319117408716851}
   PointDown: {fileID: 4064867325303981365}
   TriggerEnd: {fileID: 7338678039331938667}
+  Diamond: {fileID: 2892318430481263666}
 --- !u!1 &7338678039331938667
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,8 +604,12 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4205334154893283411, guid: e54c4e27b29a8b14db9fcb4cf89449ed, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.07774295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205334154893283411, guid: e54c4e27b29a8b14db9fcb4cf89449ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.002417028
+      value: 0.00093
       objectReference: {fileID: 0}
     - target: {fileID: 4205334154893283411, guid: e54c4e27b29a8b14db9fcb4cf89449ed, type: 3}
       propertyPath: m_LocalPosition.y
@@ -668,6 +673,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e54c4e27b29a8b14db9fcb4cf89449ed, type: 3}
+--- !u!1 &2892318430481263666 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4205334154893283501, guid: e54c4e27b29a8b14db9fcb4cf89449ed, type: 3}
+  m_PrefabInstance: {fileID: 1333009877426896031}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6707114530234963253
 PrefabInstance:
   m_ObjectHideFlags: 0

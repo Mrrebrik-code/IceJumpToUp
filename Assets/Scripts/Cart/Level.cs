@@ -8,4 +8,11 @@ public class Level : MonoBehaviour
 	public Transform PointUp;
 	public Transform PointDown;
 	public GameObject TriggerEnd;
+	public GameObject Diamond;
+
+
+	private void OnEnable()
+	{
+		Diamond.SetActive(true);
+	}
 }
