@@ -1,5 +1,7 @@
 using UnityEngine;
 using DG.Tweening;
+using System;
+
 public class CartHandler : MonoBehaviour
 {
 	[SerializeField] private float[] _positionMove;
@@ -32,15 +34,14 @@ public class CartHandler : MonoBehaviour
 
 	public void Move(int vector)
 	{
-		
-		if(vector == 0)
+		_isVector = !Convert.ToBoolean(vector);
+/*		if (vector == 0)
 		{
 			_isVector = true;
 		}
 		else if(vector == 1)
 		{
-
 			_isVector = false;
-		}
+		}*/
 	}
 }
