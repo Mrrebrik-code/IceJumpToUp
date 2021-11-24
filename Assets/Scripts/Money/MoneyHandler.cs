@@ -9,6 +9,7 @@ public class MoneyHandler : MonoBehaviour
 	public Action<int> OnMoneyUpdateAction;
 	private int _money;
 	[SerializeField] private GameObject _warningPopup;
+	[SerializeField] private int _defaultCountMoney;
 
 	private void Awake()
 	{
@@ -25,6 +26,11 @@ public class MoneyHandler : MonoBehaviour
 		if (PlayerPrefs.HasKey("money"))
 		{
 			_money = PlayerPrefs.GetInt("money");
+			StartCoroutine(UpdateMoney());
+		}
+		else
+		{
+			_money = _defaultCountMoney;
 			StartCoroutine(UpdateMoney());
 		}
 	}

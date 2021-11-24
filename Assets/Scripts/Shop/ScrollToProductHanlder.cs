@@ -115,6 +115,13 @@ public class ScrollToProductHanlder : MonoBehaviour
 			}
 			else
 			{
+/*				if (PlayerPrefs.HasKey("skin_player"))
+				{
+					if(PlayerPrefs.GetString("skin_player") == _products[i].Name)
+					{
+						_products[i].SelectedProduct();
+					}
+				}*/
 				_productsPosition.Add(-_products[i].transform.localPosition);
 			}
 			

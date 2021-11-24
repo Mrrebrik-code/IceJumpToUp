@@ -45,6 +45,11 @@ public class Product : MonoBehaviour
 			_buyButton.gameObject.SetActive(false);
 			_selectedButton.gameObject.SetActive(true);
 			ShopHandler.Instance.AddProduct(this);
+
+			if (!PlayerPrefs.HasKey("skin_player"))
+			{
+				OnSelectedSkin();
+			}
 		}
 		else
 		{
@@ -62,7 +67,6 @@ public class Product : MonoBehaviour
 				_selectedButton.gameObject.SetActive(true);
 				ShopHandler.Instance.AddProduct(this);
 			}
-
 			else
 			{
 				isBuy = false;
@@ -70,7 +74,10 @@ public class Product : MonoBehaviour
 				_selectedButton.gameObject.SetActive(false);
 			}
 		}
-		
+		if (PlayerPrefs.GetString("skin_player") == Name)
+		{
+			OnSelectedSkin();
+		}
 	}
 
 	private void OnSelectedSkin()
@@ -86,6 +93,11 @@ public class Product : MonoBehaviour
 			_selectedButton.gameObject.SetActive(true);
 			_buyButton.gameObject.SetActive(false);
 		}
+	}
+
+	public void SelectedProduct()
+	{
+		OnSelectedSkin();
 	}
 
 	public void OnSelectedButtons(bool selected)

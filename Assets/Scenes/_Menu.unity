@@ -2447,7 +2447,11 @@ PrefabInstance:
     - target: {fileID: 3881186185410961260, guid: 3a3678491d0686444a0c0ec8dbb578cf, type: 3}
       propertyPath: _warningPopup
       value: 
-      objectReference: {fileID: 3175418495872475127, guid: 5d8487d68b0a4aa4789043eed13df483, type: 3}
+      objectReference: {fileID: 5229974688356572667, guid: e22fc2c498509ed4293d2c42db68e18d, type: 3}
+    - target: {fileID: 3881186185410961260, guid: 3a3678491d0686444a0c0ec8dbb578cf, type: 3}
+      propertyPath: _defaultCountMoney
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3881186185410961261, guid: 3a3678491d0686444a0c0ec8dbb578cf, type: 3}
       propertyPath: m_Name
       value: '[MoneyHandler]'
