@@ -1690,7 +1690,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "@Itibsoft - IceJumpToUp v0.0.0.9 (2021 \u0433.)"
+  m_Text: "@Itibsoft - IceJumpToUp v0.0.1.11 (2021 \u0433.)"
 --- !u!222 &1930489798
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2070,7 +2070,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -125.67993, y: -35.799988}
+  m_AnchoredPosition: {x: -125.67993, y: -35.80005}
   m_SizeDelta: {x: 426, y: 140}
   m_Pivot: {x: 1, y: 1}
 --- !u!95 &2145288006
@@ -2241,6 +2241,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2556414176620042125, guid: 59f67eb4ad8911f43931ab9437556a52, type: 3}
+      propertyPath: _sounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2556414176620042125, guid: 59f67eb4ad8911f43931ab9437556a52, type: 3}
+      propertyPath: _sounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c933284b3c552b54c8dda89e54c5ed9d, type: 3}
+    - target: {fileID: 2556414176620042125, guid: 59f67eb4ad8911f43931ab9437556a52, type: 3}
+      propertyPath: _sounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6c1906d6165e6e14ca53093d1524bfdc, type: 3}
+    - target: {fileID: 2556414176620042125, guid: 59f67eb4ad8911f43931ab9437556a52, type: 3}
+      propertyPath: _sounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: f617ff0bb3b95b841828f9a929bed5ca, type: 3}
+    - target: {fileID: 2556414176620042125, guid: 59f67eb4ad8911f43931ab9437556a52, type: 3}
+      propertyPath: _sounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6daa4d0b7e71b0c4682efe70eadac0d6, type: 3}
+    - target: {fileID: 2556414176620042125, guid: 59f67eb4ad8911f43931ab9437556a52, type: 3}
+      propertyPath: _sounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4f79f4fe86ac7f84ba6ed5a2a1d50041, type: 3}
+    - target: {fileID: 2556414176761515418, guid: 59f67eb4ad8911f43931ab9437556a52, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5683e2d965e94124891e48430d5484f0, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59f67eb4ad8911f43931ab9437556a52, type: 3}
 --- !u!1001 &2910788487640723087

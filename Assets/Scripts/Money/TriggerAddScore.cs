@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 
@@ -8,6 +9,7 @@ public class TriggerAddScore : MonoBehaviour
 	{
 		if (collision.GetComponent<Player>() && _isAdd)
 		{
+			StartCoroutine(Delay());
 			ScoreHanlder.Instance.AddScore();
 			_isAdd = false;
 		}
@@ -15,5 +17,10 @@ public class TriggerAddScore : MonoBehaviour
 	private void OnEnable()
 	{
 		_isAdd = true;
+	}
+	private IEnumerator Delay()
+	{
+		yield return new WaitForSeconds(0.5f);
+		AudioHandler.Instance.PlaySound(TypeSound.Ice);
 	}
 }

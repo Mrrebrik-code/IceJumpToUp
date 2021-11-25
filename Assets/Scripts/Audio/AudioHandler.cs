@@ -2,12 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum TypeSound : int
+{
+	Start,
+	Stakan1,
+	Stakan2,
+	Ice,
+	Tap
+}
 public class AudioHandler : MonoBehaviour
 {
 	public static AudioHandler Instance;
 	[SerializeField] private AudioSource _soundSource;
 	[SerializeField] private AudioSource _musicSource;
-
+	[SerializeField] private AudioClip[] _sounds;
 
 	private void Awake()
 	{
@@ -32,8 +40,9 @@ public class AudioHandler : MonoBehaviour
 		_musicSource.volume = value;
 	}
 
-	public void PlaySound(AudioClip sound)
+	public void PlaySound(TypeSound sound)
 	{
-		_soundSource.PlayOneShot(sound);
+		AudioClip clip = _sounds[(int)sound];
+		_soundSource.PlayOneShot(clip);
 	}
 }

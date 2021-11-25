@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
 	{
 		if (_groundChecker.IsGround)
 		{
+			AudioHandler.Instance.PlaySound(TypeSound.Stakan1);
 			_rigidbody2D.AddForce(Vector3.up * _jumpRorce, ForceMode2D.Impulse);
 			_rigidbody2D.AddTorque(_countTorque);
 		}
