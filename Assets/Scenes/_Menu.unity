@@ -531,6 +531,7 @@ GameObject:
   - component: {fileID: 428394408}
   - component: {fileID: 428394407}
   - component: {fileID: 428394406}
+  - component: {fileID: 428394409}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -614,6 +615,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 428394409}
+        m_TargetAssemblyTypeName: UIButtonTap, Assembly-CSharp
+        m_MethodName: PlaySoundTap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &428394407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,6 +665,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 428394404}
   m_CullTransparentMesh: 1
+--- !u!114 &428394409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428394404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f967cbb0c3b8a4e8ec7d0a55095422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &481365344
 GameObject:
   m_ObjectHideFlags: 0
@@ -1911,6 +1936,7 @@ GameObject:
   - component: {fileID: 2119683850}
   - component: {fileID: 2119683849}
   - component: {fileID: 2119683852}
+  - component: {fileID: 2119683853}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -1980,7 +2006,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2119683850}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2119683853}
+        m_TargetAssemblyTypeName: UIButtonTap, Assembly-CSharp
+        m_MethodName: PlaySoundTap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2119683850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2032,6 +2070,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _settingsButton: {fileID: 2119683849}
+--- !u!114 &2119683853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119683847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f967cbb0c3b8a4e8ec7d0a55095422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2145288004
 GameObject:
   m_ObjectHideFlags: 0
@@ -2046,6 +2096,7 @@ GameObject:
   - component: {fileID: 2145288006}
   - component: {fileID: 2145288009}
   - component: {fileID: 2145288010}
+  - component: {fileID: 2145288011}
   m_Layer: 5
   m_Name: MoneyPanel (1)
   m_TagString: Untagged
@@ -2173,7 +2224,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2145288007}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2145288011}
+        m_TargetAssemblyTypeName: UIButtonTap, Assembly-CSharp
+        m_MethodName: PlaySoundTap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2145288010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2184,6 +2247,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98b9e4a6b96a22640a3072908b6e9069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2145288011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145288004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f967cbb0c3b8a4e8ec7d0a55095422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &2556414176505332821

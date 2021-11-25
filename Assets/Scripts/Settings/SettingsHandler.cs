@@ -8,6 +8,7 @@ public class SettingsHandler : MonoBehaviour
 
 	public void OpenSettings()
 	{
+		Time.timeScale = 0;
 		Instantiate(_settings, FindObjectOfType<Canvas>().transform);
 	}
 }

@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 24701080}
   - component: {fileID: 24701079}
   - component: {fileID: 24701078}
+  - component: {fileID: 24701081}
   m_Layer: 5
   m_Name: ContinueButton
   m_TagString: Untagged
@@ -218,6 +219,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 24701081}
+        m_TargetAssemblyTypeName: UIButtonTap, Assembly-CSharp
+        m_MethodName: PlaySoundTap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &24701079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,6 +269,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24701076}
   m_CullTransparentMesh: 1
+--- !u!114 &24701081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24701076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f967cbb0c3b8a4e8ec7d0a55095422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &34658461
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,6 +934,7 @@ GameObject:
   - component: {fileID: 463206056}
   - component: {fileID: 463206055}
   - component: {fileID: 463206054}
+  - component: {fileID: 463206057}
   m_Layer: 5
   m_Name: PausedButton (1)
   m_TagString: Untagged
@@ -991,6 +1017,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 463206057}
+        m_TargetAssemblyTypeName: UIButtonTap, Assembly-CSharp
+        m_MethodName: PlaySoundTap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &463206055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1029,6 +1067,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 463206052}
   m_CullTransparentMesh: 1
+--- !u!114 &463206057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463206052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f967cbb0c3b8a4e8ec7d0a55095422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &469873800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1550,6 +1600,8 @@ GameObject:
   - component: {fileID: 741405736}
   - component: {fileID: 741405735}
   - component: {fileID: 741405734}
+  - component: {fileID: 741405738}
+  - component: {fileID: 741405737}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -1621,10 +1673,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 741405737}
+        m_TargetAssemblyTypeName: UIButtonTap, Assembly-CSharp
+        m_MethodName: PlaySoundTap
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1671,6 +1723,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741405732}
   m_CullTransparentMesh: 1
+--- !u!114 &741405737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741405732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f967cbb0c3b8a4e8ec7d0a55095422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &741405738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741405732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b213bb1e3afbdfe46b1210f04db9389c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _settingsButton: {fileID: 741405734}
 --- !u!1 &850014337
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,6 +1918,7 @@ GameObject:
   - component: {fileID: 895506375}
   - component: {fileID: 895506374}
   - component: {fileID: 895506373}
+  - component: {fileID: 895506376}
   m_Layer: 5
   m_Name: ExitButton (1)
   m_TagString: Untagged
@@ -1935,6 +2013,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 895506376}
+        m_TargetAssemblyTypeName: UIButtonTap, Assembly-CSharp
+        m_MethodName: PlaySoundTap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &895506374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1973,6 +2063,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 895506371}
   m_CullTransparentMesh: 1
+--- !u!114 &895506376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895506371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f967cbb0c3b8a4e8ec7d0a55095422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &977937956
 GameObject:
   m_ObjectHideFlags: 0
@@ -2173,6 +2275,7 @@ GameObject:
   - component: {fileID: 1076640180}
   - component: {fileID: 1076640179}
   - component: {fileID: 1076640178}
+  - component: {fileID: 1076640181}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -2256,6 +2359,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1076640181}
+        m_TargetAssemblyTypeName: UIButtonTap, Assembly-CSharp
+        m_MethodName: PlaySoundTap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1076640179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2294,6 +2409,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076640176}
   m_CullTransparentMesh: 1
+--- !u!114 &1076640181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076640176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f967cbb0c3b8a4e8ec7d0a55095422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1135038270
 GameObject:
   m_ObjectHideFlags: 0
@@ -2745,6 +2872,7 @@ GameObject:
   - component: {fileID: 1413518252}
   - component: {fileID: 1413518251}
   - component: {fileID: 1413518250}
+  - component: {fileID: 1413518253}
   m_Layer: 5
   m_Name: RebotGame
   m_TagString: Untagged
@@ -2840,6 +2968,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1413518253}
+        m_TargetAssemblyTypeName: UIButtonTap, Assembly-CSharp
+        m_MethodName: PlaySoundTap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1413518251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2878,6 +3018,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413518248}
   m_CullTransparentMesh: 1
+--- !u!114 &1413518253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413518248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f967cbb0c3b8a4e8ec7d0a55095422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1443100327
 GameObject:
   m_ObjectHideFlags: 0
@@ -3258,6 +3410,7 @@ GameObject:
   - component: {fileID: 1741300179}
   - component: {fileID: 1741300178}
   - component: {fileID: 1741300177}
+  - component: {fileID: 1741300180}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -3340,6 +3493,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1741300180}
+        m_TargetAssemblyTypeName: UIButtonTap, Assembly-CSharp
+        m_MethodName: PlaySoundTap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1741300178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3378,6 +3543,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1741300175}
   m_CullTransparentMesh: 1
+--- !u!114 &1741300180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741300175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f967cbb0c3b8a4e8ec7d0a55095422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1756130469
 GameObject:
   m_ObjectHideFlags: 0
@@ -3391,6 +3568,7 @@ GameObject:
   - component: {fileID: 1756130472}
   - component: {fileID: 1756130471}
   - component: {fileID: 1756130474}
+  - component: {fileID: 1756130475}
   m_Layer: 5
   m_Name: PausedButton
   m_TagString: Untagged
@@ -3460,7 +3638,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1756130472}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1756130475}
+        m_TargetAssemblyTypeName: UIButtonTap, Assembly-CSharp
+        m_MethodName: PlaySoundTap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1756130472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3512,6 +3702,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _settingsButton: {fileID: 1756130471}
+--- !u!114 &1756130475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756130469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f967cbb0c3b8a4e8ec7d0a55095422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1766850099
 GameObject:
   m_ObjectHideFlags: 0
@@ -4333,8 +4535,8 @@ GameObject:
   - component: {fileID: 5770056379441587764}
   - component: {fileID: 5770056379441587763}
   - component: {fileID: 5770056379441587766}
-  - component: {fileID: 5770056379441587765}
   - component: {fileID: 5770056379441587767}
+  - component: {fileID: 5770056379441587765}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4408,8 +4610,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &5770056379441587765
-BoxCollider2D:
+--- !u!60 &5770056379441587765
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4431,9 +4633,36 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.45999998, y: -0.42999998}
+      - {x: 0.56, y: -0.089999996}
+      - {x: 0.57, y: -0.07}
+      - {x: 0.57, y: 0.099999994}
+      - {x: 0.51, y: 0.26}
+      - {x: 0.48999998, y: 0.32999998}
+      - {x: 0.48, y: 0.35999998}
+      - {x: 0.45999998, y: 0.42999998}
+      - {x: 0.44, y: 0.45999998}
+      - {x: 0.16, y: 0.53999996}
+      - {x: 0.07, y: 0.57}
+      - {x: -0.06, y: 0.57}
+      - {x: -0.26, y: 0.51}
+      - {x: -0.29, y: 0.5}
+      - {x: -0.44, y: 0.47}
+      - {x: -0.48, y: 0.39999998}
+      - {x: -0.53, y: 0.19}
+      - {x: -0.57, y: 0.08}
+      - {x: -0.57, y: -0.08}
+      - {x: -0.45999998, y: -0.42999998}
+      - {x: -0.42, y: -0.45999998}
+      - {x: -0.35999998, y: -0.48}
+      - {x: -0.089999996, y: -0.56}
+      - {x: -0.07, y: -0.57}
+      - {x: 0.099999994, y: -0.57}
+      - {x: 0.19, y: -0.53}
+      - {x: 0.26, y: -0.51}
+      - {x: 0.42999998, y: -0.45999998}
 --- !u!50 &5770056379441587766
 Rigidbody2D:
   serializedVersion: 4

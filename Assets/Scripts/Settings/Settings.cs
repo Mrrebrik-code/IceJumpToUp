@@ -52,6 +52,7 @@ public class Settings : MonoBehaviour
 		PlayerPrefs.SetFloat("music", _valueMusic);
 		PlayerPrefs.SetFloat("sound", _valueSound);
 		StartCoroutine(Delay());
+		Time.timeScale = 1;
 	}
 	IEnumerator Delay()
 	{
