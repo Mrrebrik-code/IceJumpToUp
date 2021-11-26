@@ -28,6 +28,14 @@ public class AudioHandler : MonoBehaviour
 		{
 			Destroy(gameObject);
 		}
+		if (PlayerPrefs.HasKey("sound"))
+		{
+			SetSoundValue(PlayerPrefs.GetFloat("sound"));
+		}
+		if (PlayerPrefs.HasKey("music"))
+		{
+			SetMusicValue(PlayerPrefs.GetFloat("music"));
+		}
 	}
 
 	public void SetSoundValue(float value)
