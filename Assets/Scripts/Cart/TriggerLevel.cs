@@ -2,14 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TriggerLevel : MonoBehaviour
+public partial class TriggerLevel : MonoBehaviour
 {
-	private enum TypeTriggerLevel
-	{
-		create,
-		destroy,
-		end
-	}
 	[SerializeField] TypeTriggerLevel _type;
 	private bool _isActive = true;
 	private void OnTriggerEnter2D(Collider2D collision)

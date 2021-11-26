@@ -9,6 +9,7 @@ public class MenuHandler : MonoBehaviour
 
 	public void StartGame()
 	{
+		ADController.Instance.ShowInterstitial();
 		SceneManager.LoadScene(_sceneGame);
 	}
 }

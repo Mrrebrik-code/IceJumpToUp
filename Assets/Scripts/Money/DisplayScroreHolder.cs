@@ -20,15 +20,19 @@ public class DisplayScroreHolder : MonoBehaviour
 	private void UpdateDisplayScore(int score, int scoreOld)
 	{
 		_textScore.text = score.ToString();
-		_textScoreCurrent.text = score.ToString();
 
+		_textScoreCurrent.text = score.ToString();
 		_textScoreOld.text = scoreOld.ToString();
 
+		PlayerPrefs.SetInt("score_save_level", score);
 	}
 
 	private void UpdateDisplayDiamond(int count, int countOld)
 	{
 		_textCountDiamond.text = count.ToString();
+
 		_textCountDiamondCurrent.text = count.ToString();
+
+		PlayerPrefs.SetInt("diamon_save_level", count);
 	}
 }

@@ -21,21 +21,25 @@ public class PausedHandler : MonoBehaviour
 	{
 		Time.timeScale = 1f;
 		GameHandler.Instance.Restart();
-		ScoreHanlder.Instance.Restart();
-		GameHandler.Instance.StartGame();
 
+		if(ADController.Instance.IsContinue == false) ScoreHanlder.Instance.Restart();
+
+		GameHandler.Instance.StartGame();
+		ADController.Instance.ShowInterstitial();
 	}
 
 	public void ExitGame()
 	{
 		SceneManager.LoadScene(_sceneMenu);
 		Time.timeScale = 1f;
+		ADController.Instance.ShowInterstitial();
 	}
 
 	public void PusedGame(bool active = false)
 	{
 		_pausedPanel.SetActive(active);
 		Time.timeScale = Convert.ToInt32(!active);
+		ADController.Instance.ShowInterstitial();
 	}
 
 	public void EndLevel()

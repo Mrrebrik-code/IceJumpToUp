@@ -35,13 +35,5 @@ public class CartHandler : MonoBehaviour
 	public void Move(int vector)
 	{
 		_isVector = !Convert.ToBoolean(vector);
-/*		if (vector == 0)
-		{
-			_isVector = true;
-		}
-		else if(vector == 1)
-		{
-			_isVector = false;
-		}*/
 	}
 }

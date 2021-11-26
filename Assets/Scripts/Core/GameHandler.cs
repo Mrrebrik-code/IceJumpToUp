@@ -34,6 +34,13 @@ public class GameHandler : MonoBehaviour
 	}
 	public void StartGame()
 	{
+		if (ADController.Instance.IsContinue)
+		{
+			var score = PlayerPrefs.GetInt("score_save_level");
+			var diamond = PlayerPrefs.GetInt("diamon_save_level");
+			StartCoroutine(DelayAddingScoreAndDiamond(score, diamond));
+			ADController.Instance.IsContinue = false;
+		}
 		
 		_gameTransform = Instantiate(_gameTransformPrefab);
 		_player = Player.Instance;
@@ -55,6 +62,20 @@ public class GameHandler : MonoBehaviour
 
 
 		_player.gameObject.SetActive(true);
+	}
+
+	private IEnumerator DelayAddingScoreAndDiamond(int countScore, int countDiamond)
+	{
+		for (int i = 0; i < countScore; i++)
+		{
+			ScoreHanlder.Instance.AddScore();
+			yield return new WaitForSeconds(0.2f);
+		}
+		for(int i = 0; i < countDiamond; i++)
+		{
+			ScoreHanlder.Instance.AddDiamond();
+			yield return new WaitForSeconds(0.2f);
+		}
 	}
 
 	public void Restart()
@@ -113,7 +134,6 @@ public class GameHandler : MonoBehaviour
 				{
 					_destroyLevel = elementBusy;
 					_destroyLevel.TriggerEnd.SetActive(true);
-					//elementBusy.gameObject.SetActive(false);
 				}
 			}
 		}

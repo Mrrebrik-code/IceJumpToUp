@@ -15,53 +15,39 @@ public class ScoreHanlder : MonoBehaviour
 	{
 		_score = default;
 		_diamondCount = default;
-		if (PlayerPrefs.HasKey("scoreOld"))
-		{
-			_scoreOld = PlayerPrefs.GetInt("scoreOld");
-		}
-		else
-		{
-			_scoreOld = default;
-		}
 
-		if (PlayerPrefs.HasKey("diamondOld"))
-		{
-			_diamondOld = PlayerPrefs.GetInt("diamondOld");
-		}
-		else
-		{
-			_diamondOld = default;
-		}
+		if (PlayerPrefs.HasKey("scoreOld")) _scoreOld = PlayerPrefs.GetInt("scoreOld");
+		else _scoreOld = default;
 
-		if (Instance == null)
-		{
-			Instance = this;
-		}
-		else
-		{
-			Destroy(gameObject);
-		}
+		if (PlayerPrefs.HasKey("diamondOld")) _diamondOld = PlayerPrefs.GetInt("diamondOld");
+		else _diamondOld = default;
 
+		if (Instance == null) Instance = this;
+		else Destroy(gameObject);
 	}
 	public void AddScore()
 	{
 		_score++;
+
 		if(_score > PlayerPrefs.GetInt("scoreOld"))
 		{
 			PlayerPrefs.SetInt("scoreOld", _score);
 			_scoreOld = PlayerPrefs.GetInt("scoreOld");
 		}
+
 		OnScroreUpdateAction?.Invoke(_score, _scoreOld);
 	}
 
 	public void AddDiamond()
 	{
 		_diamondCount++;
+
 		if (_diamondCount > PlayerPrefs.GetInt("diamondOld"))
 		{
 			PlayerPrefs.SetInt("diamondOld", _diamondCount);
 			_diamondOld = PlayerPrefs.GetInt("diamondOld");
 		}
+
 		OnDiamondUpdateAction?.Invoke(_diamondCount, _diamondOld);
 	}
 
